@@ -1,0 +1,30 @@
+<article class="text--justified">
+  <header><h2>Asteroids</h2></header>
+
+  <table *ngIf="asteroids">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let empire of asteroids.asteroids">
+      <td>{{empire.name}}</td>
+      <td>
+        <a [routerLink]="['/asteroids', empire.id]">View</a>
+      </td>
+      <td>
+        <a [routerLink]="['/asteroids', empire.id, 'edit']">Edit</a>
+      </td>
+      <td>
+        <button (click)="onDelete(empire)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/asteroids/create']" ><button>Create New</button></a>
+</article>
+

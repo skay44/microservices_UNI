@@ -1,0 +1,46 @@
+<article *ngIf="drill">
+  <header><h2>{{drill!.name}}</h2></header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-2">
+          <div class="col-6">
+            Asteroid id:
+          </div>
+          <div class="col-6">
+            <span>{{drill!.asteroid.id}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Size:
+          </div>
+          <div class="col-6">
+            <span>{{drill!.drillSize!}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            id:
+          </div>
+          <div class="col-6">
+            <span>{{drill!.id!}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Name:
+          </div>
+          <div class="col-6">
+            <span>{{drill!.name!}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+

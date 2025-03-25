@@ -1,0 +1,42 @@
+<article>
+  <header><h2>Create colony</h2></header>
+
+  <form class="container" #form="ngForm" [formGroup]="drillForm1!" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-4 p-2">
+        <div>
+          <label for="name">Name:</label>
+          <input id="name" name="name" formControlName="name"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 p-2">
+        <div>
+          <label for="size">Size:</label>
+          <input id="size" name="size" formControlName="size"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 p-2">
+        <div>
+          <label for="asteroidID">AsteroidID :</label>
+          <input id="asteroidID" name="asteroidID" formControlName="asteroidID"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 p-2">
+        <button type="submit">Create</button>
+      </div>
+      <div class="col-2 p-2">
+        <button type="button" (click)="form.resetForm()">Reset</button>
+      </div>
+    </div>
+  </form>
+</article>
+

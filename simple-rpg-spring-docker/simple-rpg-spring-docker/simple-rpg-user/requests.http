@@ -1,0 +1,15 @@
+### Get all users
+
+GET http://localhost:8083/api/users
+
+### Get single user
+
+GET http://localhost:8083/api/users/81e1c2a9-7f57-439b-b53d-6db88b071e4e
+
+### Get single user, not existing
+
+GET http://localhost:8083/api/users/84dfc3e6-99bd-4535-9452-54ccd7edf08e
+
+### Delete user
+
+DELETE http://localhost:8083/api/users/81e1c2a9-7f57-439b-b53d-6db88b071e4e

@@ -1,0 +1,19 @@
+{
+  "name": "@pl.edu.pg.eti.kask/simple-rpg-js",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "Simple RPG JavaScript based UI.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8080 -c-1 -P http://localhost:8084 src",
+    "site": "jsdoc src --package package.json --readme README.md --recurse --destination target/site"
+  },
+  "keywords": [
+    "RPG"
+  ],
+  "author": "Michał (psysiu) Wójcik",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "jsdoc": "^4.0.2"
+  }
+}

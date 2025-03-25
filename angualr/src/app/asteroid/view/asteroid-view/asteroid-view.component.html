@@ -1,0 +1,68 @@
+<article *ngIf="asteroid">
+  <header><h2>{{asteroid!.name}}</h2></header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-2">
+          <div class="col-6">
+            ID:
+          </div>
+          <div class="col-6">
+            <span>{{asteroid!.id}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            name:
+          </div>
+          <div class="col-6">
+            <span>{{asteroid!.name!}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            size:
+          </div>
+          <div class="col-6">
+            <span>{{asteroid!.asteroidSize}}</span>
+          </div>
+        </div>
+
+        <article class="text--justified">
+          <header><h4>Drills:</h4></header>
+
+          <table *ngIf="drills">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>View</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let colony of drills.miningDrills">
+              <td>{{colony.name}}</td>
+              <td>
+                <a [routerLink]="['/drills', colony.id]">View</a>
+              </td>
+              <td>
+                <a [routerLink]="['/drills', colony.id, 'edit']">Edit</a>
+              </td>
+              <td>
+                <button (click)="onDelete(colony)">Delete</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </article>
+
+      </div>
+    </div>
+  </div>
+  <a [routerLink]="['/drills/create', asteroid.id]" ><button>Create</button></a>
+</article>
+

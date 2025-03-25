@@ -1,0 +1,95 @@
+### Get all asteroids
+
+GET http://localhost:8083/api/asteroids
+
+### Get one given asteroid
+
+GET http://localhost:8083/api/asteroid/525d3e7b-bb1f-4c13-bf17-926d1a12e4c0
+
+### Delete one given asteroid
+
+DELETE http://localhost:8083/api/asteroid/525d3e7b-bb1f-4c13-bf17-926d1a12e4c0
+
+### Putting an asteroid
+
+PUT http://localhost:8083/api/asteroid/326f23b1-8069-44ab-988f-d7fed2b65d88
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "RYMCYMCYM",
+  "size": 123
+}
+
+### Get one given asteroid RYMCYMCYM
+
+GET http://localhost:8083/api/asteroid/326f23b1-8069-44ab-988f-d7fed2b65d88
+
+### Get all mining drills
+
+GET http://localhost:8083/api/miningDrills
+
+### Get all mining drills of given asteroid
+
+GET http://localhost:8083/api/asteroid/3c6f1eb1-8069-44ab-988f-d7fed2b65d87/drills
+
+### Get one given mining drill
+
+GET http://localhost:8083/api/miningDrill/f5875513-bf7b-4ae1-b8a5-5b70a1b90e76
+
+
+
+### Get one given asteroid
+
+GET http://localhost:8083/api/asteroid/3c6f1eb1-8069-44ab-988f-d7fed2b65d87
+
+
+### Put Mining drill
+
+PUT http://localhost:8083/api/miningDrill/326f23b1-8069-44ab-988f-d7fed2b65d87
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "AAAAA",
+  "size": 123,
+  "asteroid": "326f23b1-8069-44ab-988f-d7fed2b65d87"
+}
+
+### Put Mining drill to RYMCYMCYM
+
+PUT http://localhost:8083/api/miningDrill/326f23b1-8069-44ab-988f-d7fed2b65d87
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "RYBY",
+  "size": 123,
+  "asteroid": "326f23b1-8069-44ab-988f-d7fed2b65d88"
+}
+
+### Delete Mining drill
+
+DELETE http://localhost:8083/api/miningDrill/f5875513-bf7b-4ae1-b8a5-5b70a1b90e76
+
+
+### Delete Asteroid drill RYMCYMCYM
+
+DELETE http://localhost:8083/api/asteroid/326f23b1-8069-44ab-988f-d7fed2b65d88
+
+### Update Mining drill
+
+PATCH http://localhost:8083/api/miningDrill/ac4e2683-b2ba-4695-94d9-806a97fce71e
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "BsdfdsfdsfdsfsdfBB",
+  "id": "3c6f1eb1-8069-44ab-988f-d7fed2b65d87"
+}
+
+
+### Get one mining drill from RYMCYMCYM
+
+GET http://localhost:8083/api/miningDrill/326f23b1-8069-44ab-988f-d7fed2b65d87
+

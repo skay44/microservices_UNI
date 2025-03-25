@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  simple-rpg-character:
+    image: simple-rpg-character:1.0.0-SNAPSHOT
+    restart: always
+
+  simple-rpg-profession:
+    image: simple-rpg-profession:1.0.0-SNAPSHOT
+    restart: always
+    environment:
+      RPG_CHARACTER_URL: "http://simple-rpg-character:8080"
+
+  simple-rpg-user:
+    image: simple-rpg-user:1.0.0-SNAPSHOT
+    restart: always
+    environment:
+      RPG_CHARACTER_URL: "http://simple-rpg-character:8080"
+
+  simple-rpg-gateway:
+    image: simple-rpg-gateway:1.0.0-SNAPSHOT
+    restart: always
+    environment:
+      RPG_CHARACTER_URL: "http://simple-rpg-character:8080"
+      RPG_PROFESSION_URL: "http://simple-rpg-profession:8080"
+      RPG_USER_URL: "http://simple-rpg-user:8080"
+      RPG_GATEWAY_HOST: "simple-rpg-gateway:8080"
+
+  simple-rpg-js:
+    image: simple-rpg-js:1.0.0-SNAPSHOT
+    restart: always
+    environment:
+      API_URL: http://simple-rpg-gateway:8080/api
+    ports:
+      - "8086:80"
+
+  simple-rpg-ng:
+    image: simple-rpg-ng:1.0.0-SNAPSHOT
+    restart: always
+    environment:
+      API_URL: http://simple-rpg-gateway:8080/api
+    ports:
+      - "8087:80"

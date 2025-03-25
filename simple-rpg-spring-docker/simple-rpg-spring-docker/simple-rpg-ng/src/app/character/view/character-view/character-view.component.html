@@ -1,0 +1,87 @@
+<article *ngIf="character">
+  <header><h2>{{character.name}}</h2></header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-2">
+          <div class="col-6">
+            Level &amp; Profession
+          </div>
+          <div class="col-6">
+            <span>{{character.profession.id}}</span>
+            level
+            <span>{{character.level}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Experience
+          </div>
+          <div class="col-6">
+            <span>{{character.experience}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Life
+          </div>
+          <div class="col-6">
+            <span>{{character.health}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Strength
+          </div>
+          <div class="col-6">
+            <span>{{character.strength}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Constitution
+          </div>
+          <div class="col-6">
+            <span>{{character.constitution}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Charisma
+          </div>
+          <div class="col-6">
+            <span>{{character.charisma}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Age
+          </div>
+          <div class="col-6">
+            <span>{{character.age}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Background
+          </div>
+          <div class="col-6">
+            <span>{{character.background}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <img alt="Character portrait" src="/api/characters/{{character.id}}/portrait"/>
+      </div>
+    </div>
+  </div>
+</article>
